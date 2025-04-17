@@ -1,6 +1,12 @@
 import java.time.LocalDate;
 
 public class Seller {
+    String name;
+    LocalDate birthDate;
+    Integer contracts;
+    Double  soldCarrotsInTons;
+    boolean senior;
+
     Seller(){}
     Seller(String name, LocalDate birthDate, Integer contracts, Double  soldCarrotsInTons, boolean senior){
         this.name = name;
@@ -9,9 +15,4 @@ public class Seller {
         this.soldCarrotsInTons = soldCarrotsInTons;
         this.senior = senior;
     }
-    String name;
-    LocalDate birthDate;
-    Integer contracts;
-    Double  soldCarrotsInTons;
-    boolean senior;
 }
