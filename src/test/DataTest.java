@@ -39,5 +39,13 @@ public class DataTest {
                 DebugManager.print(ConsoleColor.PURPLE + "      Reservation: " + reservation);
             }
         }
+
+        DebugManager.print(ConsoleColor.BLUE + "Testing reservation positive overlapping");
+        room1.reserveRoom(guest1, LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26));
+
+        DebugManager.print(ConsoleColor.BLUE + "Testing reservation negative overlapping");
+        room1.reserveRoom(guest1, LocalDate.of(2021, 7, 27), LocalDate.of(2021, 7, 29));
+
+        DebugManager.print(ConsoleColor.GREEN + "Data test finished.");
     }
 }

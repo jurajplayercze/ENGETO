@@ -1,5 +1,8 @@
 package util;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class DebugManager {
     public static boolean DEBUG = false;
 
@@ -13,11 +16,15 @@ public class DebugManager {
 
     public static void print(String message) {
         if (DEBUG) {
-            System.out.println(message + ConsoleColor.RESET);
+            System.out.println(getFormattedTime() + message + ConsoleColor.RESET);
         }
     }
 
+    private static String getFormattedTime() {
+        return "[" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + "] ";
+    }
+
     public static void printError(String message) {
-        System.out.println(ConsoleColor.RED + message + ConsoleColor.RESET);
+        System.out.println(ConsoleColor.RED + getFormattedTime() + message + ConsoleColor.RESET);
     }
 }

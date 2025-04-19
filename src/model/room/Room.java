@@ -13,8 +13,8 @@ import java.util.List;
  */
 public class Room {
 
-    private final String ALREADY_RESERVED = "model.room.Room with id: %d is already reserved.";
-    private final String NOT_ENOUGH_CAPACITY = "model.room.Room with id: %d does not have enough capacity.";
+    private final String ALREADY_RESERVED = "Room with id: %d is already reserved.";
+    private final String NOT_ENOUGH_CAPACITY = "Room with id: %d does not have enough capacity.";
     private int roomId;
     private int capacity;
     private boolean hasBalcony;
