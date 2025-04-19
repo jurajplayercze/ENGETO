@@ -1,14 +1,28 @@
-import java.time.LocalDate;
+package model;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Represents a guest with personal information such as first name, last name, and birthdate
+ */
 public class Guest {
     private String firstName;
     private String lastName;
     private LocalDate birthDate;
 
+    private static List<Guest> guests = new ArrayList<>();
+
     public Guest(String firstName, String lastName, LocalDate birthDate) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
+        guests.add(this);
+    }
+
+    public static List<Guest> getGuests() {
+        return guests;
     }
 
     public String getFirstName() {

@@ -1,6 +1,13 @@
+package model.room;
+
+import model.Guest;
+
 import java.time.LocalDate;
 import java.util.List;
 
+/**
+ * Represents a reservation for a room within a specified date range and a list of guests
+ */
 public class RoomReservation {
     private LocalDate from, to;
     private List<Guest> guests;
@@ -28,5 +35,9 @@ public class RoomReservation {
     }
     public void setGuests(List<Guest> guests) {
         this.guests = guests;
+    }
+
+    public String toString() {
+        return from + " - " + to + " (" + guests + ")";
     }
 }
