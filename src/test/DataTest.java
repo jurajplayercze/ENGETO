@@ -16,14 +16,14 @@ public class DataTest {
 
         DebugManager.print(ConsoleColor.GREEN + "Executing data test...");
 
-        DebugManager.print(ConsoleColor.BLUE + "Creating guests 2 guests");
+        DebugManager.print(ConsoleColor.BLUE + "Creating 2 guests");
         Guest guest1 = new Guest("Adéla", "Malíková", LocalDate.of(1993, 3, 13));
         Guest guest2 = new Guest("Jan", "Dvořáček", LocalDate.of(1995, 5, 5));
 
         DebugManager.print(ConsoleColor.BLUE + "Editing birthdate of guest2");
         guest2.setBirthDate(LocalDate.of(1995, 4, 5));
 
-        DebugManager.print(ConsoleColor.BLUE + "Creating rooms 3 rooms");
+        DebugManager.print(ConsoleColor.BLUE + "Creating 3 rooms");
         Room room1 = new Room(1, 1, true, true, 1000);
         Room room2 = new Room(2, 1, true, true, 1000);
         Room room3 = new Room(3, 3, false, true, 2400);

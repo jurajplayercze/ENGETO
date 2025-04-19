@@ -1,6 +1,8 @@
 package model.room;
 
 import model.Guest;
+import util.ConsoleColor;
+import util.DebugManager;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -13,6 +15,7 @@ public class RoomReservation {
     private List<Guest> guests;
 
     public RoomReservation(LocalDate from, LocalDate to, List<Guest> guests) {
+        DebugManager.print(ConsoleColor.BLUE + "Creating room reservation: " + from + " - " + to + " (" + guests + ")");
         this.from = from;
         this.to = to;
         this.guests = guests;

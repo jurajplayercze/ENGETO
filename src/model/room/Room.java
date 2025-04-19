@@ -1,6 +1,7 @@
 package model.room;
 
 import model.Guest;
+import util.ConsoleColor;
 import util.DebugManager;
 
 import java.time.LocalDate;
@@ -23,12 +24,17 @@ public class Room {
     private static List<Room> rooms = new ArrayList<>();
 
     public Room(int roomId, int capacity, boolean hasBalcony, boolean hasSeaView, int price) {
+        DebugManager.print(ConsoleColor.BLUE + "Creating room with id: " + roomId);
         this.roomId = roomId;
         this.capacity = capacity;
         this.hasBalcony = hasBalcony;
         this.hasSeaView = hasSeaView;
         this.price = price;
         rooms.add(this);
+    }
+
+    public void destroy() {
+        rooms.remove(this);
     }
 
     public static List<Room> getRooms() {
